@@ -9,6 +9,15 @@ save_location = "./"
 username = ""
 password = ""
 
+def module_exists(module_name):
+    try:
+        __import__(module_name)
+    except ImportError:
+        return False
+    else:
+        return True
+
+
 # Import user created settings. This will override built-in settings if defined.
 if module_exists("config"):
     import config
