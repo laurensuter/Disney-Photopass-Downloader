@@ -7,9 +7,12 @@ import httplib, urllib, urllib2 #url encode, image saving
 import json
 from cookielib import CookieJar
 import datetime
-#from datutil.parser import parse #requires python-dateutil package. used to parse with timezone
+from subprocess import call #call linux command to set exif data
 
+#from datutil.parser import parse #requires python-dateutil package. used to parse with timezone
+#from gi.repository import GExiv2 # requires python-gi
 save_location = "./"
+
 
 def module_exists(module_name):
     try:
@@ -31,6 +34,8 @@ else:
 cookies = CookieJar()
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookies))
 
+print "Load login page"
+
 ### Load the login page. This will initialize some cookies. Save them.
 login_page = opener.open('https://disneyworld.disney.go.com/login/?returnUrl=https://mydisneyphotopass.disney.go.com/')
 # cookies are automatically saved.
@@ -41,20 +46,24 @@ csrf_key = csrf_key.group(0)
 csrf_key = string.split(csrf_key, "\"") # split on double quote. easiest way.
 csrf_key = csrf_key[len(csrf_key) - 2] # get the second to last item (last item is empty). array is 0-based, length is 1-based, so subtract 2
 
+print "POST login info"
 ### Post the login page with credentials (and cookies). Save the cookies.
 post_data = urllib.urlencode({'pep_csrf': csrf_key, 'username': config.username, 'password': config.password})
 login_post = opener.open('https://disneyworld.disney.go.com/login/?returnUrl=https://mydisneyphotopass.disney.go.com/', post_data)
 
+print "Get photo URLs"
 ### Grab the list of photos with their unique ids and medium resolution urls
 medium_url_list_html = opener.open("https://mydisneyphotopass.disney.go.com/slideshow/index/getMediumres")
 medium_url_list = json.load(medium_url_list_html)
 #print json.dumps(medium_url_list, sort_keys=True, indent=4)
 
+print "Get photo details"
 ### Grab the list of photo descriptions with their unique ids and timestamp and location information.
 photo_detail_list_html = opener.open("https://mydisneyphotopass.disney.go.com/disney/ajax/getGuestMedia")
 photo_detail_list = json.load(photo_detail_list_html)
 ### Link arrays by unique id.
 
+print "Save photos"
 for photo in photo_detail_list['guestMedia']:
 	
 	id = photo['guestMediaId']
@@ -79,22 +88,19 @@ for photo in photo_detail_list['guestMedia']:
 		location = photo['venue'] #AK {animal kingdom], MK {magic kingdom}, EPCOT, MNSSHP {mickeys not so scary halloween party - located at magic kingdom}
 		filename = date_created_string + ' ' + location + '.jpg' #default to current folder. also assumes jpg
 		#print url
-		urllib.urlretrieve(url, filename) # gets the file and saves it
-		
-#  url = photo['url']
-#  date_created = photo_detail_list[photo['id']]
-#  date_created_format = date('yyyy-mm-dd', date_created)
-#  location = photo_detail_list[photo['venue']]
-#  save_location = save_directory + '/' + date_created_format + location + '.jpg'
-#  wget url > save_location
-#  addexif date=date_created save_location
+		if url: #one final check to make sure the url is defined
+			urllib.urlretrieve(url, filename) # gets the file and saves it
+			date_created_exif_format = datetime.datetime.strftime(date_created, '%Y:%m:%d-%H:%M:%S')
+			#exif = GExiv2.Metadata(filename)
+			#exif['Exif.Image.DateTime'] = date_created_exif_format
+			#exif['Exif.Photo.DateTimeDigitized'] = date_created_exif_format
+			#exif['Exif.Photo.DateTimeOriginal'] = date_created_exif_format
+			#exif.save_file()
+			call(['jhead', '-mkexif', filename]) #initialize exif
+			call(['jhead', '-ts' + date_created_exif_format, filename]) #set timestamp
+			call(['jhead', '-ft', filename]) #set the OS timestamp to be the same as the exif timestamp
+			
 
-
-
-
-
-### For each array item, download the image. Image filename target should be something
-### like yyyy-mm-dd_hhmmss_location.jpg
 
 ### After saving, add EXIF information to include timestamp
 
