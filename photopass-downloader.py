@@ -1,10 +1,13 @@
 #!/usr/bin/python
 
 import string
+import time
 import re #regex
-import httplib, urllib, urllib2 #url encode
+import httplib, urllib, urllib2 #url encode, image saving
 import json
 from cookielib import CookieJar
+import datetime
+#from datutil.parser import parse #requires python-dateutil package. used to parse with timezone
 
 save_location = "./"
 
@@ -51,6 +54,44 @@ medium_url_list = json.load(medium_url_list_html)
 photo_detail_list_html = opener.open("https://mydisneyphotopass.disney.go.com/disney/ajax/getGuestMedia")
 photo_detail_list = json.load(photo_detail_list_html)
 ### Link arrays by unique id.
+
+for photo in photo_detail_list['guestMedia']:
+	
+	id = photo['guestMediaId']
+	if medium_url_list[id]: #if both lists have same id, continue. in medium_url_list, id is the json key.
+		url = medium_url_list[id]
+		date_created = photo['takenDate']
+		
+		# get timestamp
+		timezone = re.search('[-+][0-9]{2}:[0-9]{2}$', date_created).group(0)
+		timezone_hour = (int)(timezone[:3]) # characters 0, 1, and 2
+		timezone_minute = (int)(timezone[:1] + timezone[4:]) # the arithmetic sign and the minute portion (there exist some timezones with half hour offsets)
+		date_created = re.sub('([+-][0-9]{2}):([0-9]{2})$', '', date_created) #remove timezone at end
+		date_created = datetime.datetime.strptime(date_created, '%Y-%m-%dT%H:%M:%S') #convert to datetime
+		date_created_utc = date_created + datetime.timedelta(hours=(-1 * timezone_hour))
+		date_created_utc = date_created_utc + datetime.timedelta(minutes=(-1 * timezone_minute))
+		# doesn't currently use the uct timestamp, but in the future, this script could let the user
+		# force utc, or their local timestamp. that way, if they forgot to change their camera clocks,
+		# at least these photos would line up chronologically.
+		date_created_string = datetime.datetime.strftime(date_created, '%Y-%m-%d %H_%M_%S') # readable string for file save
+		
+		#print date_created_utc
+		location = photo['venue'] #AK {animal kingdom], MK {magic kingdom}, EPCOT, MNSSHP {mickeys not so scary halloween party - located at magic kingdom}
+		filename = date_created_string + ' ' + location + '.jpg' #default to current folder. also assumes jpg
+		#print url
+		urllib.urlretrieve(url, filename) # gets the file and saves it
+		
+#  url = photo['url']
+#  date_created = photo_detail_list[photo['id']]
+#  date_created_format = date('yyyy-mm-dd', date_created)
+#  location = photo_detail_list[photo['venue']]
+#  save_location = save_directory + '/' + date_created_format + location + '.jpg'
+#  wget url > save_location
+#  addexif date=date_created save_location
+
+
+
+
 
 ### For each array item, download the image. Image filename target should be something
 ### like yyyy-mm-dd_hhmmss_location.jpg
