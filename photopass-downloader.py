@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+import os
+import sys
 import string
 import time
 import re #regex
@@ -11,7 +13,7 @@ from subprocess import call #call linux command to set exif data
 
 #from datutil.parser import parse #requires python-dateutil package. used to parse with timezone
 #from gi.repository import GExiv2 # requires python-gi
-save_location = "./"
+save_location = "./photos/"
 
 
 def module_exists(module_name):
@@ -63,6 +65,9 @@ photo_detail_list_html = opener.open("https://mydisneyphotopass.disney.go.com/di
 photo_detail_list = json.load(photo_detail_list_html)
 ### Link arrays by unique id.
 
+if not os.path.exists(save_location):
+    os.makedirs(save_location)
+
 print "Save photos"
 for photo in photo_detail_list['guestMedia']:
 	
@@ -83,10 +88,10 @@ for photo in photo_detail_list['guestMedia']:
 		# force utc, or their local timestamp. that way, if they forgot to change their camera clocks,
 		# at least these photos would line up chronologically.
 		date_created_string = datetime.datetime.strftime(date_created, '%Y-%m-%d %H_%M_%S') # readable string for file save
-		
 		#print date_created_utc
+
 		location = photo['venue'] #AK {animal kingdom], MK {magic kingdom}, EPCOT, MNSSHP {mickeys not so scary halloween party - located at magic kingdom}
-		filename = date_created_string + ' ' + location + '.jpg' #default to current folder. also assumes jpg
+		filename = save_location + '/' + date_created_string + ' ' + location + ' ' + id + '.jpg' #default to current folder. also assumes jpg
 		#print url
 		if url: #one final check to make sure the url is defined
 			urllib.urlretrieve(url, filename) # gets the file and saves it
