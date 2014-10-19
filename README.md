@@ -8,6 +8,6 @@ Firefox prevents this script from opening more than 20 tabs, even if popups are 
 ### Python Linux Script
 Run from a command prompt, this automatically downloads all photos, names them with a date and location filename, and sets both the EXIF timestamp and OS timestamp.
 
-Requires the `jhead` package (for EXIF manipulation).Requires
+Requires the `jhead` package (for EXIF manipulation).
 
 To run, first copy `sample.config.py` to `config.py`. Fill in your username (email) and password. Then run `python photopass-downloader.py`. It will download all photos to the script folder.
