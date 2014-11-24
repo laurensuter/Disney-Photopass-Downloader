@@ -76,6 +76,7 @@ for photo in photo_detail_list['guestMedia']:
     if medium_url_list[photo_id]:  # if both lists have same id, continue. in medium_url_list, id is the json key.
         url = medium_url_list[photo_id]
         date_created = photo['takenDate']
+        media_type = photo['mediaType'] # can be "PHOTO" or "ANIMATED MAGIC" (video)
 
         # get timestamp
         timezone = re.search('[-+][0-9]{2}:[0-9]{2}$', date_created).group(0)
@@ -103,11 +104,14 @@ for photo in photo_detail_list['guestMedia']:
             #exif['Exif.Photo.DateTimeOriginal'] = date_created_exif_format
             #exif.save_file()
 
-            try:
-                call(['jhead', '-mkexif', filename])  # initialize exif
-                call(['jhead', '-ts' + date_created_exif_format, filename])  # set timestamp
-                call(['jhead', '-ft', filename])  # set the OS timestamp to be the same as the exif timestamp
-            except OSError as e:
-                print("'jhead' is not installed. EXIF and OS timestamp not set.")
+            if (media_type != "ANIMATED MAGIC"):  # If video, don't change exif. Otherwise, assume it's a PHOTO (I'll add other cases as they come up)
+                try:
+                    call(['jhead', '-mkexif', filename])  # initialize exif
+                    call(['jhead', '-ts' + date_created_exif_format, filename])  # set timestamp
+                    call(['jhead', '-ft', filename])  # set the OS timestamp to be the same as the exif timestamp
+                except OSError as e:
+                    print("'jhead' is not installed. EXIF and OS timestamp not set.")
+            else:
+                print("Media type is video. 'jhead' only works on jpg files. Timestamp not set.")  # Perhaps in the future, I'll use a tool that works on videos.
 
 ### After saving, add EXIF information to include timestamp
