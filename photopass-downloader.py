@@ -73,9 +73,9 @@ if not os.path.exists(save_location):
 print("Save photos")
 for photo in photo_detail_list['guestMedia']:
 
-    id = photo['guestMediaId']
-    if medium_url_list[id]:  # if both lists have same id, continue. in medium_url_list, id is the json key.
-        url = medium_url_list[id]
+    photo_id = photo['guestMediaId']
+    if medium_url_list[photo_id]:  # if both lists have same id, continue. in medium_url_list, id is the json key.
+        url = medium_url_list[photo_id]
         date_created = photo['takenDate']
 
         # get timestamp
@@ -93,7 +93,7 @@ for photo in photo_detail_list['guestMedia']:
         #print (date_created_utc)
 
         location = photo['venue']  # AK {animal kingdom], MK {magic kingdom}, EPCOT, MNSSHP {mickeys not so scary halloween party - located at magic kingdom}
-        filename = save_location + '/' + date_created_string + ' ' + location + ' ' + id + '.jpg'  # default to current folder. also assumes jpg
+        filename = save_location + '/' + date_created_string + ' ' + location + ' ' + photo_id + '.jpg'  # default to current folder. also assumes jpg
         #print (url)
         if url:  # one final check to make sure the url is defined
             urllib.urlretrieve(url, filename)  # gets the file and saves it
