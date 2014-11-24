@@ -97,9 +97,10 @@ for photo in photo_detail_list['guestMedia']:
         if (media_type == "ANIMATED MAGIC"):
             file_extension = '.mp4'  # movies are called "ANIMATED MAGIC" and are mp4 files.
 
-        filename = save_location + '/' + date_created_string + ' ' + location + ' ' + photo_id + file_extension  # default to current folder. also assumes jpg
+        filename = save_location + '/' + date_created_string + ' ' + location + ' ' + photo_id + file_extension  # default to current folder
         #print (url)
         if url:  # one final check to make sure the url is defined
+            print('File ' + filename)
             urllib.urlretrieve(url, filename)  # gets the file and saves it
             date_created_exif_format = datetime.datetime.strftime(date_created, '%Y:%m:%d-%H:%M:%S')
             #exif = GExiv2.Metadata(filename)
@@ -108,7 +109,8 @@ for photo in photo_detail_list['guestMedia']:
             #exif['Exif.Photo.DateTimeOriginal'] = date_created_exif_format
             #exif.save_file()
 
-            if (media_type != "ANIMATED MAGIC"):  # If video, don't change exif. Otherwise, assume it's a PHOTO (I'll add other cases as they come up)
+
+            if (file_extension == ".jpg"):  # If video, don't change exif. Otherwise, assume it's a PHOTO (I'll add other cases as they come up)
                 try:
                     call(['jhead', '-mkexif', filename])  # initialize exif
                     call(['jhead', '-ts' + date_created_exif_format, filename])  # set timestamp
@@ -117,5 +119,7 @@ for photo in photo_detail_list['guestMedia']:
                     print("'jhead' is not installed. EXIF and OS timestamp not set.")
             else:
                 print("Media type is video. 'jhead' only works on jpg files. Timestamp not set.")  # Perhaps in the future, I'll use a tool that works on videos.
+            print('')
+print('Done!')
 
 ### After saving, add EXIF information to include timestamp
