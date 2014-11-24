@@ -7,7 +7,7 @@ import time
 import re  # regex
 import httplib, urllib, urllib2  # url encode, image saving
 import json
-from cookielib import CookieJarF
+from cookielib import CookieJar
 import datetime
 from subprocess import call  # call linux command to set exif data
 
