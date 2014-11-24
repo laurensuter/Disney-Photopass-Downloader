@@ -77,7 +77,7 @@ for photo in photo_detail_list['guestMedia']:
         url = medium_url_list[photo_id]
         date_created = photo['takenDate']
         media_type = photo['mediaType'] # can be "PHOTO" or "ANIMATED MAGIC" (video)
-
+        file_extension = '.jpg'  # default to jpg
         # get timestamp
         timezone = re.search('[-+][0-9]{2}:[0-9]{2}$', date_created).group(0)
         timezone_hour = (int)(timezone[:3])  # characters 0, 1, and 2
@@ -93,7 +93,11 @@ for photo in photo_detail_list['guestMedia']:
         #print (date_created_utc)
 
         location = photo['venue']  # AK {animal kingdom], MK {magic kingdom}, EPCOT, MNSSHP {mickeys not so scary halloween party - located at magic kingdom}
-        filename = save_location + '/' + date_created_string + ' ' + location + ' ' + photo_id + '.jpg'  # default to current folder. also assumes jpg
+
+        if (media_type == "ANIMATED MAGIC"):
+            file_extension = '.mp4'  # movies are called "ANIMATED MAGIC" and are mp4 files.
+
+        filename = save_location + '/' + date_created_string + ' ' + location + ' ' + photo_id + file_extension  # default to current folder. also assumes jpg
         #print (url)
         if url:  # one final check to make sure the url is defined
             urllib.urlretrieve(url, filename)  # gets the file and saves it
