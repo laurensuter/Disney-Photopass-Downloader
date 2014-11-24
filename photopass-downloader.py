@@ -12,7 +12,7 @@ import datetime
 from subprocess import call  # call linux command to set exif data
 
 # from datutil.parser import parse #requires python-dateutil package. used to parse with timezone
-#from gi.repository import GExiv2 # requires python-gi
+# from gi.repository import GExiv2 # requires python-gi
 save_location = "./photos/"
 
 
@@ -31,7 +31,6 @@ if module_exists("config"):
 else:
     print("Please set up the config.py file. Copy 'sample.config.py' to 'config.py' and set up options")
     sys.exit(2)
-
 
 
 # Initialize cookie jar and session
@@ -111,7 +110,4 @@ for photo in photo_detail_list['guestMedia']:
             except OSError as e:
                 print("'jhead' is not installed. EXIF and OS timestamp not set.")
 
-
-
 ### After saving, add EXIF information to include timestamp
-
