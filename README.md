@@ -1,4 +1,10 @@
-## Disney-Photopass-Downloader
+## Disney Photopass Downloader
+This repo contains two programs designed to download medium resolution Photopass images. These images are the same ones seen in the built-in slideshow page on the Photopass website. If you want full resolution images, you'll have to actually purchase them, but the medium resolution images are sufficient for facebook or 3x5 prints.
+
+The first program is a greasemonkey script, which installs to your browser and gives you a couple of links on the Photopass website.
+
+Alternatively, the Python script, which currently only runs on Linux, lets you batch download all the photos, and it also saves the files with useful names and sets the proper timestamps.
+
 ### Greasemonkey Script
 A greasemonkey script that alter's the Photopass page, allowing you to open each photo in a separate tab/window. From there, you can save each one individually in medium resolution (max 1280 pixels on one edge)
 
