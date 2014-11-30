@@ -5,7 +5,7 @@
 // @include     https://mydisneyphotopass.disney.go.com/mymedia/
 // @include     https://mydisneyphotopass.disney.go.com/mymedia
 // @include     https://mydisneyphotopass.disney.go.com/mymedia/*
-// @version     1.21
+// @version     1.22
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js
 // @grant       none
 // @downloadURL https://raw.githubusercontent.com/schrauger/Disney-Photopass-Downloader/master/greasemonkey/Photopass_Downloader.user.js
