@@ -8,6 +8,12 @@ Alternatively, the Python script, which currently only runs on Linux, lets you b
 ### Greasemonkey Script
 A greasemonkey script that alter's the Photopass page, allowing you to open each photo in a separate tab/window. From there, you can save each one individually in medium resolution (max 1280 pixels on one edge)
 
+#### Installation Instructions
+For Firefox or Chome, the easiest way to install the script is to first have [GreaseMonkey][greasemonkey] (Firefox) or [TamperMonkey][tampermonkey ](Chrome). If you have those addons installed already, simply [open the script][script] and follow the prompts to install it.
+[greasemonkey]: https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/
+[tampermonkey]: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkf
+[script]: https://raw.githubusercontent.com/schrauger/Disney-Photopass-Downloader/master/Photopass_Downloader.user.js
+
 #### Known Issues
 * Firefox prevents this script from opening more than 20 tabs, even if popups are explicitely allowed for the photopass site.
  * Workaround: Use the range function to download photos 20 at a time. After you save the first 20, increment the range input and click 'Open' to download the next 20.
