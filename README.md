@@ -6,7 +6,7 @@ The first program is a greasemonkey script, which installs to your browser and g
 Alternatively, the Python script, which currently only runs on Linux, lets you batch download all the photos, and it also saves the files with useful names and sets the proper timestamps.
 
 ### Greasemonkey Script
-A greasemonkey script that alter's the Photopass page, allowing you to open each photo in a separate tab/window. From there, you can save each one individually in medium resolution (max 1280 pixels on one edge)
+A greasemonkey script that alters the Photopass page, allowing you to open each photo in a separate tab/window. From there, you can save each one individually in medium resolution (max 1280 pixels on one edge)
 
 #### Installation Instructions
 For Firefox or Chome, the easiest way to install the script is to first have [GreaseMonkey][greasemonkey] (Firefox) or [TamperMonkey][tampermonkey] (Chrome). If you have those addons installed already, simply [open the script][script] and follow the prompts to install it.
