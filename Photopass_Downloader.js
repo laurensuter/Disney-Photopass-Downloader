@@ -8,6 +8,8 @@
 // @version     1.1
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js
 // @grant       none
+// @downloadURL https://raw.githubusercontent.com/schrauger/Disney-Photopass-Downloader/master/Photopass_Downloader.js
+// @updateURL   https://raw.githubusercontent.com/schrauger/Disney-Photopass-Downloader/master/Photopass_Downloader.js
 // ==/UserScript==
 jQuery(document).ready(function () {
     var max_photos = +jQuery('#totalMediaCount').text();
