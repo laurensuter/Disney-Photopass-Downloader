@@ -1,1 +1,0 @@
-greasemonkey/Photopass_Downloader.user.js
