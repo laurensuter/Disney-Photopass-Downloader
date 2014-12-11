@@ -5,7 +5,7 @@
 // @include     https://mydisneyphotopass.disney.go.com/mymedia/
 // @include     https://mydisneyphotopass.disney.go.com/mymedia
 // @include     https://mydisneyphotopass.disney.go.com/mymedia/*
-// @version     2.0.0
+// @version     2.1.0
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js
 // @grant       none
 // @downloadURL https://raw.githubusercontent.com/schrauger/Disney-Photopass-Downloader/master/greasemonkey/Photopass_Downloader.user.js
@@ -87,9 +87,10 @@ jQuery(document).ready(function () {
         }
     }
 
-    jQuery("div.mosaicHeaderRightTable").after("<div style='position: relative; z-index: 100;'><a href='#' class='download_all' title='Warning - Clicking this link will open ALL of your photos in individual windows. Be prepared for multiple download popups.'>Download All</a> <br /> " +
-                                                   "<a href='#' class='download_range' title='Clicking this link will open a specified range of your photos in individual windows'>Download </a> " +
-                                                   "<input size='2' name='photopassdownload_start' value='1' min='1' max='" + max_photos + "' type='number' style='width:3em;' step='20'/> through <label name='photopassdownload_end'>20</label></div>");
+    jQuery("div.myMediaButtonContainer:last").after(" " +
+            '<div class="myMediaButtonContainer"><a class="button_secondary download_all" tabindex="-1" href="#" title="Warning - Clicking this link will open ALL of your photos in individual windows. Be prepared for multiple download popups."><span tabindex="0" class="button150">Download All</span></a></div>' +
+            '<div class="myMediaButtonContainer"><a class="button_secondary download_range" tabindex="-1" href="#" title="Clicking this link will download a specified range of your photos in individual windows."><span tabindex="0" class="button150">Download Range</span></a></div>' +
+            '<div class="myMediaButtonContainer"><input size="2" name="photopassdownload_start" value="1" min="1" max="' + max_photos + '" type="number" style="width:3em;" step="20"/> through <label name="photopassdownload_end">20</label></div>');
     // add links to download all or some photos
 
     jQuery("input[name='photopassdownload_start']").change(function () {
@@ -101,6 +102,7 @@ jQuery(document).ready(function () {
             end = max_photos;
         }
         jQuery("label[name='photopassdownload_end']").text(end);
+        //jQuery("a.download_range span").text('Download ' + start + '-' + end);
     });
 
     jQuery("a.download_all").click(function () {
