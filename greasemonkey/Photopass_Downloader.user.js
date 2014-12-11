@@ -17,7 +17,7 @@ jQuery(document).ready(function () {
     "use strict";
     var max_photos = +jQuery('#totalMediaCount').text(); // number of photos in your account (the '+' character forces it to be a number instead of a string)
     var medium_url_list; // contains key->value of unique_id->url
-    var photo_unique_ids; // contains 0-based count array with value of unique_id
+    var photo_unique_ids = []; // contains 0-based count array with value of unique_id
     jQuery.getJSON("/slideshow/index/getMediumres", function (data) {
         // contains the urls for medium resolution, as well as the unique key
         medium_url_list = data;
@@ -26,7 +26,7 @@ jQuery(document).ready(function () {
         });
     });
     var photo_detail_list; // contains raw object data with photo details
-    var photo_detail_list_array; // contains key->value of unique_id->json_object
+    var photo_detail_list_array = []; // contains key->value of unique_id->json_object
     jQuery.getJSON("/disney/ajax/getGuestMedia", function (data) {
         // contains the time and other information, as well as the unique key
         photo_detail_list = data.guestMedia;
@@ -44,10 +44,10 @@ jQuery(document).ready(function () {
         str_return += date.getFullYear();
         str_return += '-' + date.getMonth();
         str_return += '-' + date.getDate();
-        str_return += ' ' + date.getHours();
+        str_return += '_' + date.getHours(); // even when url encoded, disney's api will stop after a space, so we can't have any spaces in our filename
         str_return += '_' + date.getMinutes();
         str_return += '_' + date.getSeconds();
-        return str_return;
+        return encodeURIComponent(str_return);
     }
 
     /**
@@ -60,42 +60,38 @@ jQuery(document).ready(function () {
         date_created = new Date(Date.parse(date_created)); // javascript can automatically parse the date given by Disney
         var media_type = photo_detail_list_array[unique_id].mediaType;
         var file_extension = '.jpg'; // default to jpg
-
         var date_created_string = format_date(date_created);
+        var location = photo_detail_list_array[unique_id].venue;
 
+        if (media_type === "ANIMATED MAGIC") {
+            file_extension = '.mp4'; // movies are called "ANIMATED MAGIC" and are mp4 files.
+        }
+        var filename = date_created_string + '_' + location + '_' + unique_id + file_extension; // the full filename
+        var full_url = url + '?&fname=' + filename; // this works whether '?' is defined or not (url doesn't care that multiple questions marks exist)
+        window.open(full_url); // finally, we download the photo!
     }
 
     /**
      * Opens some or all of the available photos in new tabs to download them.
-     * @param start Start range inclusive (1-based)
+     * @param start Start range inclusive (0-based)
      * @param stop Stop range inclusive (if this is greater than available, it will stop at max available)
      */
     function download(start, stop) {
-        if (start <= max_photos) {
+        if (start < max_photos) {
             var i;
-            for (i = 0; i <= stop && i <= max_photos; i++) {
-                download_photo(photo_unique_ids[i]);
+            for (i = start; i <= stop && i < max_photos; i++) {
+                if (photo_unique_ids[i]) {
+                    download_photo(photo_unique_ids[i]);
+                }
             }
         }
     }
 
-
-
-
-
-    jQuery("div.mosaicHeaderRightTable").after("<div style='position: relative; z-index: 100;'><a href='#' class='download_all' title='Warning - Clicking this link will open ALL of your photos in individual windows'>Open All</a> | " +
-                                                   "<a href='#' class='download_range' title='Clicking this link will open a specified range of your photos in individual windows'>Open </a> " +
+    jQuery("div.mosaicHeaderRightTable").after("<div style='position: relative; z-index: 100;'><a href='#' class='download_all' title='Warning - Clicking this link will open ALL of your photos in individual windows. Be prepared for multiple download popups.'>Download All</a> <br /> " +
+                                                   "<a href='#' class='download_range' title='Clicking this link will open a specified range of your photos in individual windows'>Download </a> " +
                                                    "<input size='2' name='photopassdownload_start' value='1' min='1' max='" + max_photos + "' type='number' style='width:3em;' step='20'/> through <label name='photopassdownload_end'>20</label></div>");
     // add links to download all or some photos
 
-    jQuery("a.download_all").click(function () {
-        // when 'download all' is clicked, get medium res photos and open each in a new tab
-        jQuery.getJSON("/slideshow/index/getMediumres", function (data) {
-            jQuery.each(data, function (key, val) {
-                window.open(val);
-            });
-        });
-    });
     jQuery("input[name='photopassdownload_start']").change(function () {
         // when start range is changed, calculate the end range
         var start = +jQuery("input[name='photopassdownload_start']").val();
@@ -106,18 +102,13 @@ jQuery(document).ready(function () {
         }
         jQuery("label[name='photopassdownload_end']").text(end);
     });
+
+    jQuery("a.download_all").click(function () {
+        // when 'download all' is clicked, get medium res photos and open each in a new tab
+        download(0, max_photos - 1);
+    });
     jQuery("a.download_range").click(function () {
         // when 'download some' is clicked, get all photos, but only open the range specified in new tabs
-        jQuery.getJSON("/slideshow/index/getMediumres", function (data) {
-            var my_index = 1; // 1-based, since user-specified range begins at 1, not 0
-            jQuery.each(data, function (key, val) {
-                if ((my_index >= +(jQuery("input[name='photopassdownload_start']").val())) && (my_index <= (+jQuery("label[name='photopassdownload_end']").text()))) {
-                    // this photo is within the specified range
-                    window.open(val);
-                }
-                my_index = my_index + 1;
-                // keep track of index, because jQuery.each can be finicky about the index number.
-            });
-        });
+        download(((+jQuery("input[name='photopassdownload_start']").val()) - 1), ((+jQuery("label[name='photopassdownload_end']").text()) - 1));
     });
 });
