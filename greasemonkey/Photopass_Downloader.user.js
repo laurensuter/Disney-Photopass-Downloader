@@ -44,7 +44,7 @@ jQuery(document).ready(function () {
         str_return += date.getFullYear();
         str_return += '-' + date.getMonth();
         str_return += '-' + date.getDate();
-        str_return += '_' + date.getHours(); // even when url encoded, disney's api will stop after a space, so we can't have any spaces in our filename
+        str_return += ' ' + date.getHours(); // even when url encoded, disney's api will stop after a space, so we can't have any spaces in our filename
         str_return += '_' + date.getMinutes();
         str_return += '_' + date.getSeconds();
         return encodeURIComponent(str_return);
@@ -88,7 +88,7 @@ jQuery(document).ready(function () {
     }
 
     jQuery("div.myMediaButtonContainer:last").after(" " +
-            '<div class="myMediaButtonContainer"><a class="button_secondary download_all" tabindex="-1" href="#" title="Warning - Clicking this link will open ALL of your photos in individual windows. Be prepared for multiple download popups."><span tabindex="0" class="button150">Download All</span></a></div>' +
+            '<div class="myMediaButtonContainer"><a class="button_secondary download_all" tabindex="-1" href="#" title="Warning - Clicking this link will open ALL of your photos in individual windows. Be prepared for ' + max_photos + ' download popups."><span tabindex="0" class="button150">Download All</span></a></div>' +
             '<div class="myMediaButtonContainer"><a class="button_secondary download_range" tabindex="-1" href="#" title="Clicking this link will download a specified range of your photos in individual windows."><span tabindex="0" class="button150">Download Range</span></a></div>' +
             '<div class="myMediaButtonContainer"><input size="2" name="photopassdownload_start" value="1" min="1" max="' + max_photos + '" type="number" style="width:3em;" step="20"/> through <label name="photopassdownload_end">20</label></div>');
     // add links to download all or some photos
