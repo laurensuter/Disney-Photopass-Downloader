@@ -5,7 +5,7 @@
 // @include     https://mydisneyphotopass.disney.go.com/mymedia/
 // @include     https://mydisneyphotopass.disney.go.com/mymedia
 // @include     https://mydisneyphotopass.disney.go.com/mymedia/*
-// @version     2.1.2
+// @version     2.1.3
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js
 // @grant       none
 // @downloadURL https://raw.githubusercontent.com/schrauger/Disney-Photopass-Downloader/master/greasemonkey/Photopass_Downloader.user.js
@@ -15,6 +15,7 @@
 /*global jQuery*/
 jQuery(document).ready(function () {
     "use strict";
+    var str_space = ' '; // non-breaking space character.
     var max_photos = +jQuery('#totalMediaCount').text(); // number of photos in your account (the '+' character forces it to be a number instead of a string)
     var medium_url_list; // contains key->value of unique_id->url
     var photo_unique_ids = []; // contains 0-based count array with value of unique_id
@@ -44,7 +45,7 @@ jQuery(document).ready(function () {
         str_return += date.getFullYear();
         str_return += '-' + date.getMonth();
         str_return += '-' + date.getDate();
-        str_return += ' ' + date.getHours(); // even when url encoded, disney's api will stop after a space, so we can't have any spaces in our filename
+        str_return += str_space + date.getHours(); // even when url encoded, disney's api will stop after a space, so we can't have any real spaces in our filename. use 'fake' non-breaking-spaces instead
         str_return += '_' + date.getMinutes();
         str_return += '_' + date.getSeconds();
         return encodeURIComponent(str_return);
@@ -66,7 +67,7 @@ jQuery(document).ready(function () {
         if (media_type === "ANIMATED MAGIC") {
             file_extension = '.mp4'; // movies are called "ANIMATED MAGIC" and are mp4 files.
         }
-        var filename = date_created_string + '_' + location + '_' + unique_id + file_extension; // the full filename
+        var filename = date_created_string + str_space + location + str_space + unique_id + file_extension; // the full filename
         var full_url = url + '?&fname=' + filename; // this works whether '?' is defined or not (url doesn't care that multiple questions marks exist)
         window.open(full_url); // finally, we download the photo!
     }
