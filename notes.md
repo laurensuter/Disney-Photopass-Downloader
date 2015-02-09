@@ -3,7 +3,6 @@ Notable `getGuestMedia` fields
 ##### `campus` - Overall park location
 * `WDWPR` - Walt Disney World (PR - Public Relations?)
 
-
 ##### `venue` - Sub-Park location (sometimes events)
 * `AK` animal kingdom
 * `MNSSHP` - mickeys not so scary halloween party - located at magic kingdom
@@ -35,19 +34,19 @@ Notable `getGuestMedia` fields
 ##### `guestMediaCreateDate` - Date and timestamp when the photographer uplodaded the photo to the website/backend. Useless for us, but listed here so that it doesn't get confused with the other timestamp
 
 ##### `location` - Fairly specific location within the park where the photographer took the picture.
-* `MSMKTHOU`
-* `TSHOLIDAY`
-* `TEST`
-* `HBFIVEDM`
-* `RPWCHARACTER`
-* `ENTR3`
-* `ENTR`
-* `MSATHCLB`
-* `MSCASEYS`
-* `ECENTR2`
-* `WSFRN`
-* `SPACEMOUNTAINA` - Space Mountain (Track A - to your left when you get shuffled to the left or right side - when you are at the ride gate, the car comes from the right and moves to the left)
 * `BUZZLIGHTYEARRIDE` - Buzz Lightyear Ride
+* `ECENTR2` - Epcot Center - Epcot ball and flowers behind us
+* `ENTR` - Magic Kingdom Entrance - just after security before going through the tunnels, with the building behind
+* `ENTR3` - Animal Kingdom Entrance with Christmas Tree
+* `HBFIVEDM` - Hollywood Studios with hat in the background (stock photo) - not sure what the initials stand for
+* `MSATHCLB` - Main Street Athletic Club at Magic Kingdom
+* `MSCASEYS` - Main Street Casey's Corner at Magic Kingdom - photo is past most of main street, with none of the shops visible in the photo
+* `MSMKTHOU` - Main Street Magic Kingdom (THOU) - doesn't matter which way the photographer is facing (castle or opposite in background has same code)
+* `RPWCHARACTER` - Rafiki's Planet Watch Character greeting (with Rafiki)
+* `SPACEMOUNTAINA` - Space Mountain (Track A - to your left when you get shuffled to the left or right side - when you are at the ride gate, the car comes from the right and moves to the left)
+* `TEST` - usually used for the bonus/stock photos
+* `TSHOLIDAY` - just before main street, closup with the Christmas tree behind us
+* `WSFRN` - World Showcase France at Epcot
 
 ##### `description` - Fairly generic description
 * `Visiting Magic Kingdom Park`
