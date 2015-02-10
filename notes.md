@@ -51,7 +51,7 @@ Notable `getGuestMedia` fields
 * `ENTR1` - Magic Kingdom (random places when assigned to stock photos)
 * `ENTR3` - Animal Kingdom Entrance with Christmas Tree
 * `ENTRTR1` - Magic Kingdom Entrance close to the castle stage (stock photo)
-* `FNTSYBRG` - Magic Kingdom bridge to tomorrowland corner, with castle in background
+* `FNTSYBRG` - Magic Kingdom bridge to New Fantasy Land, with castle in background
 * `HBFIVEDM` - Hollywood Studios with hat in the background (stock photo) - not sure what the initials stand for
 * `MSATHCLB` - Main Street Athletic Club at Magic Kingdom
 * `MSFIRSTA` - Main Street just after the first loop
