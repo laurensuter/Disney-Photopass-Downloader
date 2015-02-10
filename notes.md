@@ -43,7 +43,7 @@ Notable `getGuestMedia` fields. *Italics* indicate values found in other photos,
 ##### `guestMediaCreateDate` - Date and timestamp when the photographer uplodaded the photo to the website/backend. Useless for us, but listed here so that it doesn't get confused with the other timestamp
 
 ##### `location` - Fairly specific location within the park where the photographer took the picture.
-* *`BRDGMDL`* - Bridge at Animal Kingdom with Tree of Life in background (not sure what MDL means)
+* *`BRDGMDL`* - Bridge Middle at Animal Kingdom with Tree of Life in background 
 * `BRDGTOP` - Bridge Top at Animal Kingdom
 * `BUZZLIGHTYEARRIDE` - Buzz Lightyear Ride
 * `CHRCON3` - At Epcot, just before the world showcase loop (taken during food and wine festival) - not sure what the acronym is, unless it is related to CHRistmas CONcert (photo taken Jan 3)
