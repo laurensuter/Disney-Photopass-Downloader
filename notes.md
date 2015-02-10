@@ -70,7 +70,7 @@ Notable `getGuestMedia` fields. *Italics* indicate values found in other photos,
 * `MSCASEYS` - Main Street Casey's Corner at Magic Kingdom - photo is past most of main street, with none of the shops visible in the photo
 * *`MSGAZETT`* - Main Street Gazette
 * `MSMKTHOU` - Main Street Magic Kingdom (THOU) - doesn't matter which way the photographer is facing (castle or opposite in background has same code)
-* *`OHANA`* - Ohana at Polynesian Resort
+* *`OHANA`* - 'Ohana at Polynesian Resort
 * `OSBLIGHT2` - Osbourn Lights at Hollywood Studios - Merry Christmas sign is behind us; photo was taken at the intersection inside the main light area
 * `PFTHBLUEA1CHAR` - Princess Fairytale Hall (BLUEA1) Character - Met Anna; This was the left side, I think (as you wait in line)
 * `PFTHBLUEA2CHAR` - Princess Fairytale Hall (BLUEA2) Character - Met Elsa; This was the left side, I think (as you wait in line)
