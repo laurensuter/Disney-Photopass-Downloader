@@ -1,7 +1,7 @@
 Notable `getGuestMedia` fields
 
 ##### `campus` - Overall park location
-* `WDWPR` - Walt Disney World (PR - Public Relations?)
+* `WDWPR` - Walt Disney World Parks & Resorts
 
 ##### `venue` - Sub-Park location (sometimes events)
 * `AK` animal kingdom
