@@ -51,7 +51,7 @@ Code | Venue | Acronym | Details
 `BUZZLIGHTYEARRIDE` | Magic Kingdom | Buzz Lightyear Ride
 `CHRCON3` | Epcot | (possibly) Christmas Concert 3 |Just before the world showcase loop (taken during food and wine festival on Jan 3)
 *`DINOSAURRIDE`* | Animal Kingdom | Dinosaur Ride
-*`DPIRIDESYSGMTT`* | Epcot | (Disney Photo Imaging Ride System General Motors Test Track) | Test Track Ride
+*`DPIRIDESYSGMTT`* | Epcot | Disney Photo Imaging Ride System General Motors Test Track | Test Track Ride
 `ECENTR1` | Epcot | Epcot Center 1 | Closer to the epcot ball (compared to ecentr2)
 `ECENTR2` | Epcot | Epcot Center 2 | Epcot ball and flowers behind us
 *`ECENTR4`* | Epcot | Epcot Center 4 | (need to find a way to describe all these ecentr# locations)
