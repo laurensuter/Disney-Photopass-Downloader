@@ -1,4 +1,4 @@
-Notable `getGuestMedia` fields
+Notable `getGuestMedia` fields. *Italics* indicate values found in other photos, not ones I have personally seen.
 
 ##### `campus` - Overall park location
 * `WDWPR` - Walt Disney World Parks & Resorts
