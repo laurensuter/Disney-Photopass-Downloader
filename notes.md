@@ -6,6 +6,7 @@ Notable `getGuestMedia` fields. *Italics* indicate values found in other photos,
 ##### `venue` - Sub-Park location/hotel (sometimes events)
 * `AK` animal kingdom
 * *`CONTEMP`* - Contemporary Resort
+* *`DOWNTOWN`* - Downtown Disney
 * `MNSSHP` - mickeys not so scary halloween party - located at magic kingdom
 * `MK` - magic kingdom
 * `EPCOT` - epcot
@@ -47,16 +48,25 @@ Notable `getGuestMedia` fields. *Italics* indicate values found in other photos,
 
 Code | Venue | Acronym | Details
 ---- | ----- | ------- | -------
+*`ADVOUTPOSTA1CHARACTER`* | Animal Kingdom | Adventure Out Poster A1 Character | Character greeting with Mickey and Minnie in safari costumes
+*`ADVOUTPOSTB1CHARACTER`* | Animal Kingdom | Adventure Out Poster B1 Character | Character greeting with Mickey and Minnie (possibly in Christmas sweaters)
 *`AGRABAH`* | Magic Kingdom | Agrabah | city of mystery, of enchantment, and the finest merchandise this side of the River Jordan! On sale today! Come on down!
+*`ANMTION1`* | Hollywood Studios | Animation 1 | Character greeting Big Hero 6
 *`ASIATRAILSROVER`* | 
+*`BACKSIDE`* | Epcot | Backside | 
 *`BACKSIDE1`* | Epcot | Backside 1 | Past the Epcot ball into the park, with the Epcot ball in the background
 *`BACKSIDE2`* | Epcot | Backside 2 | 
 *`BACKSIDE3`* | Epcot | Backside 3 | 
 *`BACKSIDE4`* | Epcot | Backside 4 |
+*`BBBCASTLE1`* | Magic Kingdom | Bibbidi Bobbidi Boutique Castle | Hair Style (Princess)
+*`BBBCASTLE2`* | Magic Kingdom | Bibbidi Bobbidi Boutique Castle | Hair Style (Prince)
 *`BELLEVILLAGEBRIDGEICONNC`* | Magic Kingdom | Belle Village Bridge Icon NC | Bridge near Beast Castle (not bridge leading into Be Our Guest)
 *`BEOURGUESTCHAR`* | Magic Kingdom | Be Our Guest Character | Meeting Beast in the Be Our Guest restaurant
+*`BOATLND`* | | Boat Landing | Pocohontus again?
+*`BRDGBTM`* | Animal Kingdom | Bridge Bottom | Closest to Tree of Life in background
 *`BRDGMDL`* | Animal Kingdom | Bridge Middle | Tree of Life in background
 `BRDGTOP` | Animal Kingdom | Bridge Top | 
+*`BUSSTOPMARQUEEICON`* | Animal Kingdom | Bus Stop Marquee Icon | Animal Kingdom "Have a wild time!" sign
 `BUZZLIGHTYEARRIDE` | Magic Kingdom | Buzz Lightyear Ride
 *`BUZZLTYRCHAR`* | Magic Kingdom | Buzz Lightyear Character | Jail with Zerg
 *`CHEFMICKEY1`* | Contemporary Resort | Chef Mickey 1 | Character greeting at restaurant
@@ -69,8 +79,11 @@ Code | Venue | Acronym | Details
 *`DINOSAURRIDE`* | Animal Kingdom | Dinosaur Ride | 
 *`DISCOISLANDCHAR`* | Animal Kingdom | Discovery Island Character | Pocahontas Character greeting
 *`DPIRIDESYSGMTT`* | Epcot | Disney Photo Imaging Ride System General Motors Test Track | Test Track Ride
+*`DSROVERAM`* | Downtown Disney | DS Rover AM | Morning rover
+*`DSROVERPM`* | Downtown Disney | DS Rover PM | Evening rover
 `ECENTR1` | Epcot | Epcot Center 1 | Closer to the epcot ball (compared to ecentr2)
 `ECENTR2` | Epcot | Epcot Center 2 | Epcot ball and flowers behind us
+*`ECENTR3`* | Epcot | Epcot Center 3 | Close to epcot ball
 *`ECENTR4`* | Epcot | Epcot Center 4 | (need to find a way to describe all these ecentr# locations)
 *`ECROVE4`* | Epcot | Epcot Center ROVE 4 | 
 *`ENCHANTEDTALESBLUE`* | Magic Kingdom | Enchanted Tales Blue | 
@@ -82,6 +95,7 @@ Code | Venue | Acronym | Details
 *`EVRST3`* | Animal Kingdom | Expedition Everest 3 | Expedition Everist ride sign
 *`EVRST4`* | Animal Kingdom | Expedition Everest 4 | Bridge near Expedition Everest
 *`EXPEDITIONEVERESTRIDE`* | Animal Kingdom | Expedition Everest Ride
+*`EXPHLBBB1`* | | EXPHL Bibbidi Bobbidi Boutique 1 | Princess and Prince hairstyle final photos
 *`FAIRYTALEGARDENCHAR`* | Magic Kingdom | Character greeting with Merida from Brave
 `FNTSYBRG` | Magic Kingdom | Fantasy Bridge | bridge to New Fantasy Land, with castle in background
 *`FROZENFOREST`* | Hollywood Studios | Frozen Forest | Frozen castle backdrop
@@ -91,6 +105,7 @@ Code | Venue | Acronym | Details
 *`GASTONFOUNTAINICONNC`* | Magic Kingdom | Gaston Fountain Icon NC | In front of Gaston's Tavern and his statue
 *`GASTONSTAVERNCHAR`* | Magic Kingdom | Gaston's Tavern Character | By Gaston's Tavern - character greeting
 *`GROTTOACHAR`* | Magic Kingdom | Grotto A Character | Ariel's Grotto character greeting
+*`GROTTOBCHAR`* | Magic Kingdom | Grotto B Character | 
 *`HAT1`* | Hollywood Studios | Hat 1 | Goofy character greeting
 *`HATLEFT`* | Hollywood Studios | Hat Left |
 *`HAUNTEDMANSIONEXIT`* | Magic Kingdom | Haunted Mansion Exit | Exiting Haunted Mansion, but not with the ghost horse and buggy
@@ -134,7 +149,8 @@ Code | Venue | Acronym | Details
 *`ROCKNRCOASTERRIDE`* | Hollywood Studios | Rock'n Roller Coaster Ride |
 *`ROVER1`* | Hollywood Studios | Rover 1 | with hat in background - not sure what Rover refers to
 *`ROVERFANTASY1`* | Magic Kingdom | Rover Fantasy 1 | Partially inside castle
-*`ROVERFRONTIERLAND`* | Magic Kingdom Rover Frontier Land | Indoor dance party
+*`ROVERFRONTIERLAND`* | Magic Kingdom | Rover Frontier Land | Indoor dance party
+*`ROVERMAINSTREET`* | Magic Kingdom | Rover Main Street |
 `RPWCHARACTER` | Animal Kingdom | Rafiki's Planet Watch Character | Inside the building, with Rafiki himself
 *`RPWCOURTYARD1CHARACTER`* | Animal Kingdom | Rafiki's Planet Watch Courtyard 1 Character | Outside the building, with Chip & Dale
 `SBCCALLIOPECHAR` | Magic Kingdom | SBC Calliope Character | Circus area. (not sure about the acronym; best I could come up with is Sleeping Beauty Castle Calliope Character, which makes no sense. SBC is in California, and Calliope is one of the Muses in Hercules.)
@@ -148,6 +164,7 @@ Code | Venue | Acronym | Details
 `SPACEMOUNTAINB` | Magic Kingdom | Space Mountain Ride Track B
 *`SPLASH`* | Magic Kingdom | Splash | Splash Mountain Ride 
 *`SPLASHEXITCHAR`* | Magic Kingdom | Splash Exit Character | Splash Mountain exit character greeting - Woody and Jessie
+*`STORYBOOKMARQUEECHAR`* | Magic Kingdom | Storybook Marquee Character |
 *`STUDIOARCH`* | Hollywood Studios | Studio Arch | HOllywood Studios Arch in background
 *`SUNSET2`* | Hollywood Studios | Sunset 2 | Tower of Terror in background
 *`SUNSET3`* | Hollywood Studios | Sunset 3 | Tower of Terror in background
@@ -159,6 +176,7 @@ Code | Venue | Acronym | Details
 *`TOWEROFTERRORBRIDE`* | Hollywood Studios | Tower of Terror Ride Track B |
 `TREEBACK` | Animal Kingdom | Tree Back | angle of the Tree of Life, framed by trees closer to the subjects
 *`TSFAIRIESACHAR`* | Magic Kingdom | TS Fairies A Character | Tinker Belle
+*`TSFAIRIESBCHAR`* | Magic Kingdom | TS Fairies B Character | 
 `TSHOLIDAY` | Magic Kingdom | TS Holiday | just before main street, inside the street loop where the flagpole is (and where the Christmas tree or pumpkin display is set up during the holiday)
 `TSHOLICON` | Magic Kingdom | TS Holiday (CON?) | same as `TSHOLIDAY`, I think.
 *`VERCHAR1`* | Magic Kingdom | (VER?) Character 1 | walkway by river near castle (character greeting spot)
