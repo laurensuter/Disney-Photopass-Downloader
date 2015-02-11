@@ -66,7 +66,8 @@ Code | Venue | Acronym | Details
 *`CHRCON4`* | Epcot | ? | Meeting Mickey
 *`CHRCON5`* | Epcot | ? | Meeting Goofie
 *`CHRCON6`* | Epcot | ? | Meeting Minnie
-*`DINOSAURRIDE`* | Animal Kingdom | Dinosaur Ride
+*`DINOSAURRIDE`* | Animal Kingdom | Dinosaur Ride | 
+*`DISCOISLANDCHAR`* | Animal Kingdom | Discovery Island Character | Pocahontas Character greeting
 *`DPIRIDESYSGMTT`* | Epcot | Disney Photo Imaging Ride System General Motors Test Track | Test Track Ride
 `ECENTR1` | Epcot | Epcot Center 1 | Closer to the epcot ball (compared to ecentr2)
 `ECENTR2` | Epcot | Epcot Center 2 | Epcot ball and flowers behind us
@@ -89,6 +90,8 @@ Code | Venue | Acronym | Details
 *`FWROVER2`* | Epcot | FW ROVER 2 | Big fountain
 *`GASTONFOUNTAINICONNC`* | Magic Kingdom | Gaston Fountain Icon NC | In front of Gaston's Tavern and his statue
 *`GASTONSTAVERNCHAR`* | Magic Kingdom | Gaston's Tavern Character | By Gaston's Tavern - character greeting
+*`GROTTOACHAR`* | Magic Kingdom | Grotto A Character | Ariel's Grotto character greeting
+*`HAT1`* | Hollywood Studios | Hat 1 | Goofy character greeting
 *`HATLEFT`* | Hollywood Studios | Hat Left |
 *`HAUNTEDMANSIONEXIT`* | Magic Kingdom | Haunted Mansion Exit | Exiting Haunted Mansion, but not with the ghost horse and buggy
 *`HBCSTORY`* | Hollywood Studios | HB C Story | 
@@ -100,10 +103,12 @@ Code | Venue | Acronym | Details
 *`ENCHANTEDTALESPURPLE`* | Magic Kingdom | Enchanted Tales Purple |Purple side
 *`LIBRTBRG`* | Magic Kingdom | Liberty Bridge | 
 *`LIVINSEAS`* | Epcot | Living Seas | References the ride before it was remade into The Seas with Nemo and Friends
+*`MAMASCOURTCHAR`* | Hollywood Studios | Mama's Court Character | Character greeting
 *`MERMAIDBRIDGEICONNC`* | Magic Kingdom | Mermaid Bridge Icon NC | In front of the Little Mermaid ride
 *`MINETRAIN`* | Magic Kingdom | Mine Train | Ride photo
+*`MONSTERS`* | Hollywood Studios | Monsters | Monsters, Inc character greeting with Sully and Mike
 `MSATHCLB` | Magic Kingdom | Main Street Athletic Club |
-*`MSBRCART`* | Magic Kingdom | Main Street (BRCARD?) | Somewhere between the end of main street and the castle
+*`MSBRCART`* | Magic Kingdom | Main Street (BRCART?) | Somewhere between the end of main street and the castle
 *`MSCINEMA`* | Magic Kingdom | Main Street Cinema |
 `MSFIRSTA` | Magic Kingdom | Main Street First A | Main Street just after the first loop
 `MSCASEYS` | Magic Kingdom | Main Street Casey's Corner | photo is past most of main street, with none of the shops visible in the photo
@@ -113,6 +118,7 @@ Code | Venue | Acronym | Details
 *`OHANA`* | Polynesian Resort | 'Ohana | Character dining
 `OSBLIGHT2` | Hollywood Studios | Osbourn Lights 2 | Merry Christmas sign is behind us; photo was taken at the intersection inside the main light area
 *`OUTERHRIGHT`* | Magic Kingdom | Outer H Right | The right side (when facing the castle) of the main street loop by the castle. About 3 o'clock (arial view)
+*`OUTFITTERSCHAR1`* | Animal Kingdom | Outfitters Character 1 | Dug & Russel character greeting
 *`PARTRIGHT`* | Magic Kingdom | Part Right | The right side ( when facing the castle) of the main street loop by the castle. About 5 o'clock (arial view)
 `PFTHBLUEA1CHAR` | Magic Kingdom | Princess Fairytale Hall Blue A 1 Character | Met Anna; This was the left side, I think (as you wait in line)
 `PFTHBLUEA2CHAR` | Magic Kingdom | Princess Fairytale Hall Blue A 2 Character | Met Elsa; This was the left side, I think (as you wait in line)
@@ -128,19 +134,27 @@ Code | Venue | Acronym | Details
 *`ROCKNRCOASTERRIDE`* | Hollywood Studios | Rock'n Roller Coaster Ride |
 *`ROVER1`* | Hollywood Studios | Rover 1 | with hat in background - not sure what Rover refers to
 *`ROVERFANTASY1`* | Magic Kingdom | Rover Fantasy 1 | Partially inside castle
+*`ROVERFRONTIERLAND`* | Magic Kingdom Rover Frontier Land | Indoor dance party
 `RPWCHARACTER` | Animal Kingdom | Rafiki's Planet Watch Character | Inside the building, with Rafiki himself
 *`RPWCOURTYARD1CHARACTER`* | Animal Kingdom | Rafiki's Planet Watch Courtyard 1 Character | Outside the building, with Chip & Dale
+`SBCCALLIOPECHAR` | Magic Kingdom | SBC Calliope Character | Circus area. (not sure about the acronym; best I could come up with is Sleeping Beauty Castle Calliope Character, which makes no sense. SBC is in California, and Calliope is one of the Muses in Hercules.)
+`SBCMARQUEECHAR` | Magic Kingdom | SBC Marquee Character | close to circus area. Again, acronym doesn't make sense. Maybe programmers just reuse old codes rather than generate new ones for specific character meets.
+*`SBCSIDESHOWDAISYCHAR`* | Magic Kingdom | SBC Sideshow Daisy Character | Character greeting
+*`SBCSIDESHOWDONALDOCHAR`* | Magic Kingdom | SBC Sideshow Donald O Character | Character greeting
+*`SBCSIDESHOWGOOFINICHAR`* | Magic Kingdom | SBC Sideshow Goofy INI Character | Character greeting
+*`SBCSIDESHOWMINNIECHAR`* | Magic Kingdom | SBC Sideshow Minnie Character | Character Greeting
 *`SDENTR2`* | Hollywood Studios | (SD - StuDios?) Entrance 2 | Before ticket barrier, with Sorcerer Mickey hedge and brooms in background
 `SPACEMOUNTAINA` | Magic Kingdom | Space Mountain Ride Track A | to your left when you get shuffled to the left or right side - when you are at the ride gate (and in the photo), the car comes from the right and moves to the left
 `SPACEMOUNTAINB` | Magic Kingdom | Space Mountain Ride Track B
-`SBCCALLIOPECHAR` | Magic Kingdom | ? | Circus area. (not sure about the acronym; best I could come up with is Sleeping Beauty Castle Calliope Character, which makes no sense. SBC is in California, and Calliope is one of the Muses in Hercules.)
-`SBCMARQUEECHAR` | Magic Kingdom | ? | close to circus area. Again, acronym doesn't make sense. Maybe programmers just reuse old codes rather than generate new ones for specific character meets.
 *`SPLASH`* | Magic Kingdom | Splash | Splash Mountain Ride 
+*`SPLASHEXITCHAR`* | Magic Kingdom | Splash Exit Character | Splash Mountain exit character greeting - Woody and Jessie
 *`STUDIOARCH`* | Hollywood Studios | Studio Arch | HOllywood Studios Arch in background
 *`SUNSET2`* | Hollywood Studios | Sunset 2 | Tower of Terror in background
 *`SUNSET3`* | Hollywood Studios | Sunset 3 | Tower of Terror in background
 `TEST` | N/A | Test | usually used for the bonus/stock photos
+*`THEGLADE`* | Magic Kingdom | The Glade | Character greeting - Tiana
 `TOMBRDG1` | Magic Kingdom | Tomorrowland Bridge 1 | the castle in the background
+*`TOMORRCHAR2`* | Magic Kingdom | Tomorrowland Character 2 | Lotso (Toy Story 3)
 *`TOWEROFTERRORARIDE`* | Hollywood Studios | Tower of Terror Ride Track A |
 *`TOWEROFTERRORBRIDE`* | Hollywood Studios | Tower of Terror Ride Track B |
 `TREEBACK` | Animal Kingdom | Tree Back | angle of the Tree of Life, framed by trees closer to the subjects
