@@ -47,6 +47,7 @@ Notable `getGuestMedia` fields. *Italics* indicate values found in other photos,
 
 Code | Venue | Acronym | Details
 ---- | ----- | ------- | -------
+*`AGRABAH`* | Magic Kingdom | Agrabah | city of mystery, of enchantment, and the finest merchandise this side of the River Jordan! On sale today! Come on down!
 *`ASIATRAILSROVER`* | 
 *`BACKSIDE1`* | Epcot | Backside 1 | Past the Epcot ball into the park, with the Epcot ball in the background
 *`BACKSIDE2`* | Epcot | Backside 2 | 
@@ -57,9 +58,12 @@ Code | Venue | Acronym | Details
 *`BRDGMDL`* | Animal Kingdom | Bridge Middle | Tree of Life in background
 `BRDGTOP` | Animal Kingdom | Bridge Top | 
 `BUZZLIGHTYEARRIDE` | Magic Kingdom | Buzz Lightyear Ride
+*`BUZZLTYRCHAR`* | Magic Kingdom | Buzz Lightyear Character | Jail with Zerg
 *`CHEFMICKEY1`* | Contemporary Resort | Chef Mickey 1 | Character greeting at restaurant
+*`CHRCON1`* | Epcot | ? | Meeting Mickey
+*`CHRCON2`* | Epcot | ? | Meeting Goofy
 `CHRCON3` | Epcot | (possibly) Christmas Concert 3 |Just before the world showcase loop (taken during food and wine festival on Jan 3)
-*`CHRCON4`* | Epcot | ? | Meeting Mickie
+*`CHRCON4`* | Epcot | ? | Meeting Mickey
 *`CHRCON5`* | Epcot | ? | Meeting Goofie
 *`CHRCON6`* | Epcot | ? | Meeting Minnie
 *`DINOSAURRIDE`* | Animal Kingdom | Dinosaur Ride
@@ -77,8 +81,12 @@ Code | Venue | Acronym | Details
 *`EVRST3`* | Animal Kingdom | Expedition Everest 3 | Expedition Everist ride sign
 *`EVRST4`* | Animal Kingdom | Expedition Everest 4 | Bridge near Expedition Everest
 *`EXPEDITIONEVERESTRIDE`* | Animal Kingdom | Expedition Everest Ride
+*`FAIRYTALEGARDENCHAR`* | Magic Kingdom | Character greeting with Merida from Brave
 `FNTSYBRG` | Magic Kingdom | Fantasy Bridge | bridge to New Fantasy Land, with castle in background
+*`FROZENFOREST`* | Hollywood Studios | Frozen Forest | Frozen castle backdrop
+*`FROZENFUN1`* | Hollywood Studios | Frozen Fun 1 | Frozen stone bridge backdrop
 *`FROZENROVER1`* | Hollywood Studios | Frozen (ROVER?) 1 | Hollywood Tower in background. Could be referencing Frozen (the movie), which had special events on the streets. Perhaps ROVER stands for Right Over (as opposed to Left Over).
+*`FWROVER2`* | Epcot | FW ROVER 2 | Big fountain
 *`GASTONFOUNTAINICONNC`* | Magic Kingdom | Gaston Fountain Icon NC | In front of Gaston's Tavern and his statue
 *`GASTONSTAVERNCHAR`* | Magic Kingdom | Gaston's Tavern Character | By Gaston's Tavern - character greeting
 *`HATLEFT`* | Hollywood Studios | Hat Left |
@@ -90,6 +98,7 @@ Code | Venue | Acronym | Details
 *`HBTAILOR`* | Hollywood Studios | HB Tailor | hat in the background, a bit closer than HBFIVEDM
 *`ENCHANTEDTALESBLUE`* | Magic Kingdom | Enchanted Tales Blue | Blue side
 *`ENCHANTEDTALESPURPLE`* | Magic Kingdom | Enchanted Tales Purple |Purple side
+*`LIBRTBRG`* | Magic Kingdom | Liberty Bridge | 
 *`LIVINSEAS`* | Epcot | Living Seas | References the ride before it was remade into The Seas with Nemo and Friends
 *`MERMAIDBRIDGEICONNC`* | Magic Kingdom | Mermaid Bridge Icon NC | In front of the Little Mermaid ride
 *`MINETRAIN`* | Magic Kingdom | Mine Train | Ride photo
@@ -112,8 +121,10 @@ Code | Venue | Acronym | Details
 *`PFTHPURPLED1CHAR`* | Magic Kingdom | Princess Fairytale Hall Purple D 1 Character
 *`PFTHPURPLED2CHAR`* | Magic Kingdom | Princess Fairytale Hall Purple D 1 Character
 *`PIRATES`* | Magic Kingdom | Pirates | By Pirates of the Caribbean ride
+*`PLYDSCHAR1`* | Hollywood Studios | PLYDS Character 1 | Sofia character greeting
+*`PLYDSCHAR2`* | Hollywood Studios | PLYDS Character 2 | Jake character greeting
 *`ROSEGRDN`* | Magic Kingdom | Rose Garden | Rose garden with small gate and castle in background
-*`ROSEGARDENTOPIARY`* | Magic Kingdom | Rose Garden Topiary | Mickie and Minnie hedges
+*`ROSEGARDENTOPIARY`* | Magic Kingdom | Rose Garden Topiary | Mickey and Minnie hedges
 *`ROCKNRCOASTERRIDE`* | Hollywood Studios | Rock'n Roller Coaster Ride |
 *`ROVER1`* | Hollywood Studios | Rover 1 | with hat in background - not sure what Rover refers to
 *`ROVERFANTASY1`* | Magic Kingdom | Rover Fantasy 1 | Partially inside castle
@@ -144,6 +155,9 @@ Code | Venue | Acronym | Details
 *`WRLDSHW4`* | Epcot | World Showcase 4 |
 *`WSCHI`* | Epcot | World Showcase China | Possible character greeting with Mulan
 `WSFRN` | Epcot | World Showcase France |
+*`WSFRN2`* | Epcot | World Showcase France 2 | Character greeting
+*`WSGERICON`* | Epcot | World Showcase Germany Icon | 
+*`WSMOR`* | Epcot | World Showcase Morocco | 
 `WSMEX` | Epcot | World Showcase Mexico |
 *`WSUK`* | Epcot | World Showcase United Kingdom |
 *`VISAMEET`* | Epcot | Visa Meet | Character greet (surfboards and wooden fence prop behind)
