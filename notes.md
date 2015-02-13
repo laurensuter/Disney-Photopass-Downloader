@@ -111,8 +111,8 @@ Code | Venue | Acronym | Details
 *`FROZENFUN1`* | Hollywood Studios | Frozen Fun 1 | Frozen stone bridge backdrop
 *`FROZENROVER1`* | Hollywood Studios | Frozen (ROVER?) 1 | Hollywood Tower in background. Could be referencing Frozen (the movie), which had special events on the streets. Perhaps ROVER stands for Right Over (as opposed to Left Over).
 *`FUTURE`* | Epcot | Future | Chip & Dale character greeting
-*`FWROVER`* | Epcot | FW ROVER | Finding Nemo statues/props behind waist-high wall
-*`FWROVER2`* | Epcot | FW ROVER 2 | Big fountain
+*`FWROVER`* | Epcot | Future World Rover | Finding Nemo statues/props behind waist-high wall
+*`FWROVER2`* | Epcot | Future World Rover 2 | Big fountain
 *`GASTONFOUNTAINICONNC`* | Magic Kingdom | Gaston Fountain Icon NC | In front of Gaston's Tavern and his statue
 *`GASTONSTAVERNCHAR`* | Magic Kingdom | Gaston's Tavern Character | By Gaston's Tavern - character greeting
 *`GROTTOACHAR`* | Magic Kingdom | Grotto A Character | Ariel's Grotto character greeting
