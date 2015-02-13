@@ -91,7 +91,9 @@ Code | Venue | Acronym | Details
 *`ECENTR3`* | Epcot | Epcot Center 3 | Close to epcot ball
 *`ECENTR4`* | Epcot | Epcot Center 4 | (need to find a way to describe all these ecentr# locations)
 *`ECENTR5`* | Epcot | Epcot Center 5 | Epcot photo backdrop with Pluto character
-*`ECROVE4`* | Epcot | Epcot Center ROVE 4 | 
+*`ECROVE1`* | Epcot | Epcot Center Rover 1 | 
+*`ECROVE3`* | Epcot | Epcot Center Rover 3 |
+*`ECROVE4`* | Epcot | Epcot Center Rover 4 | 
 *`ENCHANTEDTALESBLUE`* | Magic Kingdom | Enchanted Tales Blue | 
 *`ENCHANTEDTALESGOLD`* | Magic Kingdom | Enchanted Tales Gold | Belle and Candlestick
 `ENTR` | Magic Kingdom | Entrance | just after security before going through the tunnels, with the building behind
